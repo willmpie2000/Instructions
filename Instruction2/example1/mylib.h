@@ -45,6 +45,7 @@ int get_hist_item
 void fill_histogram
 
     ( float*           grades ,
-      int*             hist   );
+      int*             hist   ,
+	  int              count  );
 
 #endif

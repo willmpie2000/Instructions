@@ -214,6 +214,72 @@ int get_hist_item
 	( float    x )
 
 {
+	if ( x >= 0 && x < 0.5 )
+	{
+	return 0;
+	return round(x);
+	}
+	
+	if ( x >= 0.5 && x < 1.5 )
+	{
+	return 1;
+	return round(x);
+	}
+	
+	if ( x >= 1.5 && x < 2.5 )
+	{
+	return 2;
+	return round(x);
+	}
+	
+	if ( x >= 2.5 && x < 3.5 )
+	{
+	return 3;
+	return round(x);
+	}
+
+	if ( x >= 3.5 && x < 4.5 )
+	{
+	return 4;
+	return round(x);
+	}
+	
+	if ( x >= 4.5 && x < 5.5 )
+	{
+	return 5;
+	return round(x);
+	}
+	
+	if ( x >= 5.5 && x < 6.5 )
+	{
+	return 6;
+	return round(x);
+	}
+	
+	if ( x >= 6.5 && x < 7.5 )
+	{
+	return 7;
+	return round(x);
+	}
+
+	if ( x >= 7.5 && x < 8.5 )
+	{
+	return 8;
+	return round(x);
+	}
+	
+	if ( x >= 8.5 && x < 9.5 )
+	{
+	return 9;
+	return round(x);
+	}
+	
+	if ( x >= 9.5 && x < 9.99 )
+	{
+	return 10;
+	return round(x);
+	}
+	
 	if ( x > 9.99 )
 	{
 	return 11;
@@ -230,9 +296,28 @@ int get_hist_item
 void fill_histogram
 
 	( float*           grades ,
-	  int*             hist   )
+	  int*             hist   ,
+	  int			   count  )
 
 {
-	//To be completed by the student
+	int i;
+	//int hist_position;
+	//int histogram;
+
+		for ( i = 0 ; i < count ; i++ )
+	{
+		hist[get_hist_item(grades[i])] = hist[get_hist_item(grades[i])] +1;
+		
+		//hist_position = get_hist_item(grades[i]);
+		//histogram[hist_position] = histogram[hist_position] + 1;
+		//hist = get_hist_item(grades[i]);
+		//histogram[hist] = histogram[hist] + 1;
+		//printf("This is the hist position %2.0i\n",hist);
+	}
+
+	for ( i = 0 ; i < HIST_ITEMS ; i ++ )
+	{
+		printf("This will be the histogram : %2.0i \n",hist[i]);
+	}
 }
 

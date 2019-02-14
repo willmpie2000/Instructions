@@ -35,7 +35,9 @@ int main( void )
 
 	clear_histogram( hist );
 
-	fill_histogram( grades , hist );
+	fill_histogram( grades , hist , count );
+	
+	printf("This is the histogram : \n%2.0i",hist);
 
 	return 0;
 }
